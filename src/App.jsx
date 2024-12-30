@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Suspense, lazy, useContext } from 'react';
 import CartContext from './components/cart-context';
 import Home from './components/Home';
+import Signup from './components/Signup';
 
 const Store = lazy(() => import("./components/Store"));
 const RootLayout = lazy(() => import('./components/Root'));
@@ -31,7 +32,8 @@ function App() {
         { path: '/store/:productId', element: ctx.isLoggedIn ? <ProductDetails /> : <AuthPage /> },
         { path: '/about', element: <About /> },
         { path: '/contactus', element: <ContactUs /> },
-        { path: '/auth', element: <AuthPage /> }
+        { path: '/auth', element: <AuthPage /> },
+        { path: '/signup', element: ctx.isLoggedIn ? <Store /> : <Signup /> },
       ]
     }
   ]);
