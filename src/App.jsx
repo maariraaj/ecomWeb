@@ -27,7 +27,7 @@ function App() {
         </Suspense>
       ),
       children: [
-        { path: '/', element: <Home /> },
+        { path: '/', element: ctx.isLoggedIn ? <Store /> : <AuthPage /> },
         { path: '/store', element: ctx.isLoggedIn ? <Store /> : <AuthPage /> },
         { path: '/store/:productId', element: ctx.isLoggedIn ? <ProductDetails /> : <AuthPage /> },
         { path: '/about', element: <About /> },
