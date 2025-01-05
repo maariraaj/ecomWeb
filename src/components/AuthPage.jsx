@@ -123,7 +123,7 @@ const AuthPage = () => {
                 }
             }).then((data) => {
                 authCtx.login(data.idToken, data.email);
-                navigate('/');
+                navigate('/store');
             })
             .catch((error) => {
                 alert(error.message);
