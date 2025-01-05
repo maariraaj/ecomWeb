@@ -20,7 +20,7 @@ function MainNavigation() {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Home</NavLink>
+                            <NavLink className="nav-link" to="/tickets">Home</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/store">Store</NavLink>

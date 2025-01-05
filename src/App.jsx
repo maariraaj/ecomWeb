@@ -34,6 +34,7 @@ function App() {
         { path: '/contactus', element: <ContactUs /> },
         { path: '/auth', element: <AuthPage /> },
         { path: '/signup', element: ctx.isLoggedIn ? <Store /> : <Signup /> },
+        { path: '/tickets', element: ctx.isLoggedIn ? <Home /> : <AuthPage /> },
       ]
     }
   ]);
